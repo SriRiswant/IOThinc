@@ -1,1 +1,26 @@
-CODE
+IoThinc Project for recruitment 
+Sri Riswant K S 
+24BEE0003
+
+def language(N, lines):
+    count_t = 0
+    count_s = 0
+    
+    for line in lines:
+        count_t += line.lower().count('t')
+        count_s += line.lower().count('s')
+    
+    if count_t > count_s:
+        return "English"
+    else:
+        return "French"
+
+N = int(input("Enter the number of lines: ")) 
+lines = [ ]  
+
+for i in range(N):
+    line = input("Enter line ")  
+    lines.append(line) 
+
+result = language(N, lines)
+print(result)
